@@ -1,0 +1,57 @@
+.footer{
+    background-color: #5D6D7E;
+    height: 8rem;
+    display: flex;
+    font-size: 2rem;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyRight {
+    font-family: Courier New;
+    flex: 2;
+    color: white;
+    font-size: 1.4rem;
+    margin-left: 3%;
+}
+
+.contactList {
+    flex: 1;
+    color: white;
+    font-size: 1.3rem;
+    font-family: Courier New;
+}
+
+.contactList ul {
+    float: right;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 10%;
+}
+
+.item {
+    font-size: 1.6rem;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.item:hover{
+    text-decoration: underline;
+}
+@media (max-width: 40rem) {
+    .footer{
+        min-width: 30rem;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media print {
+    .footer{
+        display: none;
+    }
+}

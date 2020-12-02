@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.title {
+    font-family: Courier New;
+    font-size: 0.8rem;
+
+}

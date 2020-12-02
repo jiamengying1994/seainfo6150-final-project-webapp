@@ -1,0 +1,105 @@
+@media(min-width: 300px) {
+    .detailbox {
+        display: grid;
+        grid-template-columns: 90%;
+        /* set the detailList on the bottom and detailImage on the top */
+
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .detailList {
+        grid-area: bottom;
+    }
+    .detailList ul {
+        margin: 0 auto;
+    }
+    .detailImage {
+        text-align: center;
+        grid-area: top;
+    }
+}
+
+@media(min-width: 900px) {
+    .detailbox {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-areas: "left right";
+
+    }
+    .detailList {
+        grid-area: right;
+    }
+    .detailList ul {
+        text-align: left;
+    }
+    .detailImage {
+
+        grid-area: left;
+    }
+}
+
+.detailList  h1 {
+  position: relative;
+  top:-2em;
+  margin-left: 1em;
+}
+
+.detailImage img {
+    width: 90%;
+    z-index: -1;
+}
+
+.detailList li {
+    position: relative;
+    top:-4em;
+    list-style: none;
+    display: inline-block;
+    border-right: 1px solid #ededed;
+    line-height: 140%;
+    color: #333333;
+    text-align: center;
+
+    padding: 0 3rem;
+}
+
+.detailList span {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.description {
+    position: relative;
+    top:-4em;
+    padding: 5px 24px;
+
+    margin-left: 1em;
+    height: 5rem;
+    line-height: 2rem;
+    text-align: left;
+    font-size: 1rem;
+    clear: both;
+}
+
+button {
+    font-size: 1.8rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+}
+
+button img {
+    width: 3rem;
+    height: 3rem;
+}
+
+button:hover {
+    background-color: gray;
+    color: #ededed;
+    cursor: pointer;
+}
+
+.addCartButton {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

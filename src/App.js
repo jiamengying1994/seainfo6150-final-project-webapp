@@ -1,11 +1,20 @@
-import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
 
+import React, {useEffect, useState} from "react";
+import { Switch, Route, Link, useRouteMatch  } from "react-router-dom";
+import { isEmpty } from "lodash";
+
+
+
+import Header from './Header';
+import Footer from './Footer';
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
+import AllProducts from './AllProducts/AllProducts';
+import About from './About/About';
 import Error from "./Error/Error.jsx";
+import CategoryProducts from './CategoryProducts/CategoryProducts';
+import Category from './Category/Category';
+import Contact from './Contact/Contact';
+import ProductDetail from './ProductDetail/ProductDetail';
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -17,52 +26,78 @@ const externalContent = {
 };
 
 function App() {
-  return (
+   const [fetchedData, setFetchedData] = useState([]);
+
+     useEffect(() => {
+      const fetchData = async () => {
+        // performs a GET request
+        const response = await fetch(
+          "https://run.mocky.io/v3/19dda0e0-17d5-4b37-9068-2494f5ede0c2"
+        );
+
+
+        const responseJson = await response.json();
+
+         console.log(responseJson)
+        setFetchedData(responseJson);
+      };
+
+      if (isEmpty(fetchedData)) {
+        fetchData();
+      }
+    }, [fetchedData]);
+
+  return isEmpty(fetchedData) ? null : (
     <>
-      <header>
-        <nav>
-          <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/foo">Foo</Link>
-            </li>
-            <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header/>
+      <Category categories={Object.values(fetchedData.categories)} />
+
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path */}
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/products" exact>
+          <AllProducts products={Object.values(fetchedData.data)} />
+        </Route>
+
+//        {/* passing parameters via a route path */}
+         <Route
+         path="/products/:category/:id"
+         exact
+         render={routerProps => {
+         const id = routerProps.match.params.id;
+         const product = Object.values(fetchedData.data)[id];
+         console.log(product)
+         return (
+          <ProductDetail product={product} />
+          );
+          }}
+         />
+
+          <Route
+                path="/products/:category"
+                exact
+                render={routerProps => {
+                const category = routerProps.match.params.category;
+                const productsInCategory = Object.values(fetchedData.data).filter(product =>
+                   product.category === category);
+
+                return (
+                <CategoryProducts category={category} products = {productsInCategory} />);
+                }}
+           />
+
+
         <Route
-          path="/bar/:categoryId/:productId"
+          path="/about"
           exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
-          )}
-        />
-        <Route
-          path="/baz"
-          exact
-          render={() => <Baz content={externalContent} />}
+          render={() => <About content={externalContent} />}
         />
         <Route component={Error} />
+
       </Switch>
+      <Footer/>
     </>
   );
 }

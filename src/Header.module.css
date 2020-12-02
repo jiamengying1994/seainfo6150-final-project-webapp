@@ -1,0 +1,63 @@
+.header{
+    background-image: url('http://images.ctfassets.net/p62egiw5uahp/51U2ekgW5Hfd08zgsuTXOe/3f7fb9a33df79c150b9c29e017218c5b/mlb-desktop-bg.jpg');
+    background-size: 100% 100%;
+    height: 20rem;
+    min-width: 30rem;
+}
+
+.headerNavigate{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 0.8rem;
+    font-size: 2.8rem;
+    height: 18rem;
+}
+
+
+
+.item{
+    margin-left: 3%;
+    padding: 0.5%;
+    text-decoration: none;
+    color: #343434;
+    font-family: Courier New;
+}
+.item:hover{
+    text-decoration: underline;
+}
+
+.Name{
+    position: absolute;
+    color: #343434;
+    padding: 0% 0 5% 3%;
+    font-size: 5rem;
+    font-family: Courier New;
+}
+
+@media (max-width: 40rem) {
+    .header{
+        min-width: 30rem;
+        flex-wrap: wrap-reverse;
+        font-size: 2rem;
+        background-size: 100% 100%;
+    }
+    .headerNavigate{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 25rem){
+    .headerNavigate{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+}
+@media print {
+     .header{
+        display: none;
+    }
+}
