@@ -15,6 +15,7 @@ import CategoryProducts from './CategoryProducts/CategoryProducts';
 import Category from './Category/Category';
 import Contact from './Contact/Contact';
 import ProductDetail from './ProductDetail/ProductDetail';
+import NotFound from './NotFound/NotFound';
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -94,7 +95,9 @@ function App() {
           exact
           render={() => <About content={externalContent} />}
         />
-        <Route component={Error} />
+        <Route
+           render={() => <NotFound />}
+        />
 
       </Switch>
       <Footer/>

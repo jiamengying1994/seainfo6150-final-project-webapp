@@ -8,10 +8,11 @@
       justify-content: center;
 }
 .about_text{
-     width: 50%;
+     width: 80%;
      height: auto;
-     margin: 1em;
+     margin: 0.1em;
      color: white;
+     background: hsla(0, 5%, 10%, .9);
      text-align: left;
      position: absolute;
      padding-left: 5%;
@@ -23,6 +24,34 @@
      display: block;
 }
 }
+
+@media(min-width:600px){
+
+.aboutpage {
+      height: 40rem;
+      width: 100%;
+
+}
+.about_text{
+     font-family: Courier New;
+     width: 80%;
+     height: 40%;
+     margin: 1em;
+     background: hsla(0, 5%, 10%, .9);
+     color: white;
+     text-align: left;
+     position: absolute;
+     padding-left: 5%;
+     padding-right: 5%;
+     padding-top: 2%;
+     padding-bottom: 2%;
+     z-index: 1;
+     font-size: 1em;
+     display: block;
+}
+}
+
+
 
 @media(min-width:900px){
 
@@ -45,7 +74,7 @@
      padding-top: 2%;
      padding-bottom: 2%;
      z-index: 1;
-     font-size: 2em;
+     font-size: 1.5em;
      display: block;
 }
 }

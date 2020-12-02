@@ -1,36 +1,69 @@
 @media(min-width:300px){
-.container{
-  width: auto;
-  height: auto;
-}
 .contact_background {
-  height: 40rem;
-  width: 100%;
-  position: relative;
-  top:10rem;
-  align-items: center;
-  justify-content: center;
-}
-}
-
-@media(min-width:900px){
-.container{
-  width: 100%;
-  height:100%;
-  display:grid;
-  grid-template-columns: 50% 50%;
-}
-.contact_background {
-  height: 80rem;
+  height: 100%;
   width: 100%;
   display: flex;
   position: relative;
-  top:-10rem;
+  margin-bottom: 5rem;
+  top:1rem;
   align-items: top;
   justify-content: top;
 }
+
+.contact_text{
+  font-family: Courier New;
+  font-size: 1rem;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  background-color:hsl(0, 0%, 90%, 0.5);
+  width: 90%;
+  height: 100%;
+}
+.title{
+  font-size: 1rem;
+  font-family: Courier New;
 }
 
+.contact_text img{
+  width: 20px;
+  height: 10px;}
+
+}
+
+@media(min-width:600px){
+
+.contact_background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 5rem;
+  top:1rem;
+  align-items: top;
+  justify-content: top;
+}
+
+.contact_text{
+  font-family: Courier New;
+  font-size: 1rem;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  background-color:hsl(0, 0%, 90%, 0.5);
+  width: 90%;
+  height: 100%;
+}
+.title{
+  font-size: 1.5rem;
+  font-family: Courier New;
+}
+
+.contact_text img{
+  width: 30px;
+  height: 20px;}
+
+}
+
+@media(min-width:900px){
 .contact_background {
   height: 100%;
   width: 100%;
@@ -59,7 +92,7 @@
 .contact_text img{
   width: 40px;
   height: 30px;
-}
+}}
 
 
 

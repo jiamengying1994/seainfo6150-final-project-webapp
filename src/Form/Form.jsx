@@ -55,7 +55,7 @@ const Form = () => {
             </select></p></div>
 
             <div className={style.label}>
-                  <header>Prefer contacted by:</header>
+                  <header>Your age group: </header>
 
                     <input type="radio" id="age1" name="age" value="0-21" />
                     <label htmlFor="age1">0-21</label>
