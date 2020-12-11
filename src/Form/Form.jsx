@@ -49,7 +49,7 @@ const Form = () => {
 
             <div className = {style.label}><p><label htmlFor="myDropdownId2">Prefer contacted by: </label>
             <select name="myDropdown2" id="myDropdownId2">
-              <option value="">Choosewq</option>
+              <option value="">Choose</option>
               <option value="Phone">Phone</option>
               <option value="Email">Email</option>
             </select></p></div>
