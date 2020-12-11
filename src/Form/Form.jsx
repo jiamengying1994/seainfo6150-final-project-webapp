@@ -38,7 +38,7 @@ const Form = () => {
 
             <div className = {style.label}><label htmlFor="myDropdownId">Category Interested:  </label>
             <select name="myDropdown" id="myDropdownId">
-              <option value="null"></option>
+              <option value="">Choose</option>
               <option value="Abstract">Abstract</option>
               <option value="Impressionism">Impressionism</option>
               <option value="Classicism">Classicism</option>
@@ -47,9 +47,9 @@ const Form = () => {
               <option value="Pop Art">Pop Art</option>
             </select></div>
 
-            <div className = {style.label}><p><label htmlFor="myDropdownId">Prefer contacted by: </label>
-            <select name="myDropdown" id="myDropdownId">
-              <option value="null"></option>
+            <div className = {style.label}><p><label htmlFor="myDropdownId2">Prefer contacted by: </label>
+            <select name="myDropdown2" id="myDropdownId2">
+              <option value="">Choosewq</option>
               <option value="Phone">Phone</option>
               <option value="Email">Email</option>
             </select></p></div>

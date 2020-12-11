@@ -3,7 +3,6 @@
     grid-column-gap: 2%;
     margin-left: 2%;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-columns: repeat(auto-fit, minmax(4, 1fr));
 }
 .Display {
     display: flex;

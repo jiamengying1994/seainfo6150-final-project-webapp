@@ -33,7 +33,7 @@ function App() {
       const fetchData = async () => {
         // performs a GET request
         const response = await fetch(
-          "https://run.mocky.io/v3/19dda0e0-17d5-4b37-9068-2494f5ede0c2"
+          "https://run.mocky.io/v3/88957fa5-ec01-4a80-983a-f6ff0bfabcc7"
         );
 
 

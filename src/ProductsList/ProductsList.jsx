@@ -8,15 +8,15 @@ const ProductsList = ({ products}) => {
   return products.map(product => {
     const category = product.category
     return (
-      <div key={product.id}>
-        <div className={styles.singleProduct}>
+
+        <div className={styles.singleProduct} key={product.id}>
           <div>
             <Link className={styles.AllProducts} to={`/products/${product.category}/${product.id}`}>
               <img className={styles.productsImage} src={product.url} alt={product.title}/>
             </Link>
           </div>
         </div>
-      </div>
+
     );
   })
 };
