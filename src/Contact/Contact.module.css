@@ -6,18 +6,19 @@
   position: relative;
   margin-bottom: 5rem;
   top:1rem;
-  align-items: top;
-  justify-content: top;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact_text{
+  width: 90%;
+  height: 100%;
   font-family: Courier New;
   font-size: 1rem;
   padding-left: 5%;
   padding-bottom: 5%;
   background-color:hsl(0, 0%, 90%, 0.5);
-  width: 90%;
-  height: 100%;
+
 }
 .title{
   font-size: 1rem;

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetail test renders correctly 1`] = `
+<div>
+  <div
+    class="ProductDetail"
+  >
+    <div
+      class="detailbox"
+    >
+      <div
+        class="detailImage"
+      >
+        <img />
+      </div>
+      <div
+        class="detailList"
+      >
+        <h1>
+           
+           
+        </h1>
+        <ul>
+          <li>
+            <span />
+            <p>
+              Category
+            </p>
+          </li>
+          <li>
+            <span />
+            <p>
+              Dimensions
+            </p>
+          </li>
+          <li>
+            <span />
+            <p>
+              Techniques
+            </p>
+          </li>
+        </ul>
+        <div
+          class="description"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

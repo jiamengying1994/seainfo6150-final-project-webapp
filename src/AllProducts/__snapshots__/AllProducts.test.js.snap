@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllProducts test renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="singleProduct"
+    >
+      <div>
+        <a
+          class="AllProducts"
+          href="/products/undefined/undefined"
+        >
+          <img
+            alt="1"
+            class="productsImage"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="singleProduct"
+    >
+      <div>
+        <a
+          class="AllProducts"
+          href="/products/undefined/undefined"
+        >
+          <img
+            alt="2"
+            class="productsImage"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import styles from './ProductDetail.module.css';
 
 const ProductDetail = ({ product}) => {
-
-
-
-
     return (
       <div className={styles.ProductDetail}>
 

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the contact component correctly 1`] = `
+<div>
+  <div
+    class="contact_background"
+  >
+    <div
+      class="contact_text"
+    >
+      <div
+        class="title"
+      >
+        <h1>
+          Contact
+        </h1>
+      </div>
+      <p>
+        Feel free to contact us.
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                alt="Email"
+                src="./assets/img/contact/email.svg"
+              />
+            </td>
+            <td>
+              Email
+            </td>
+            <td>
+              mygallery@gmail.com
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                alt="Phone"
+                src="./assets/img/contact/phone.svg"
+              />
+            </td>
+            <td>
+              Phone
+            </td>
+            <td>
+              (206)457-6764
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                alt="Address"
+                src="./assets/img/contact/address.svg"
+              />
+            </td>
+            <td>
+              Address
+            </td>
+            <td>
+              401 Terry Street, Seattle, WA98109
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

@@ -9,54 +9,45 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding-bottom: 0.8rem;
     font-size: 2.8rem;
     height: 18rem;
+    padding-bottom: 0.7rem;
 }
 .item{
+    font-family: Courier New;
     margin-left: 3%;
+    color: #343434;
     padding: 0.5%;
     text-decoration: none;
-    color: #343434;
-    font-family: Courier New;
 }
+
 .item:hover{
     text-decoration: underline;
 }
 
 .Name{
+    font-family: Courier New;
+    font-size: 4.5rem;
     position: absolute;
     color: #343434;
     padding: 0% 0 5% 3%;
-    font-size: 5rem;
-    font-family: Courier New;
 }
 
 @media (max-width: 300px) {
-    .header{
-        min-width: 30rem;
-        flex-wrap: wrap-reverse;
-        font-size: 1rem;
-        background-size: 100% 100%;
-    }
+
     .headerNavigate{
         display: flex;
-        flex-direction: column;
         justify-content: flex-end;
+        flex-direction: column;
     }
 }
 @media (max-width: 600px){
-    .header{
-        min-width: 30rem;
-        flex-wrap: wrap-reverse;
-        font-size: 2rem;
-        background-size: 100% 100%;
-    }
+
     .headerNavigate{
         display: flex;
-        flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
         font-size: 1.8rem;
+        flex-direction: column;
     }
 }
